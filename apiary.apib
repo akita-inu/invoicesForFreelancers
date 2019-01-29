@@ -23,6 +23,17 @@ Invicing for freelancers is a small app to handle invoicing in a small scale.
                 "settings": {
                     "licence": "active",
                 }
+            },
+            {
+                "user": {
+                    "first": "Jindra",
+                    "last": "Mikesova"
+                },
+                "user_id": 2,
+                "created_at": "2019-01-29T08:40:51.620Z",
+                "settings": {
+                    "licence": "active",
+                }
             }
         ]
 
@@ -35,39 +46,35 @@ form of choices.
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "user": {
+                "first": "Natalie",
+                "last": "Mikesova",
+                "middle": "Marie"
+            },
+            "user_id": 1,
+            "created_at": "2019-01-29T08:40:51.620Z",
+            "settings": {
+                "licence": "active",
+            }
         }
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /users/1
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "user": {
+                    "first": "Natalie",
+                    "last": "Mikesova",
+                    "middle": "Marie"
+                },
+                "user_id": 1,
+                "created_at": "2019-01-29T08:40:51.620Z",
+                "settings": {
+                    "licence": "active",
+                }
             }
